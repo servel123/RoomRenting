@@ -29,4 +29,13 @@ public class Room {
     public void setTenPhong(String tenPhong) { this.tenPhong = tenPhong; }
     public void setGiaThue(double giaThue) { this.giaThue = giaThue; }
     public void setDaThue(boolean daThue) { this.daThue = daThue; }
+
+    public void setTenNguoiThue(String tenant) {
+        this.tenNguoiThue = tenant;
+    }
+
+    public void setSoDienThoai(String phone) {
+        this.soDienThoai = phone;
+
+    }
 }
