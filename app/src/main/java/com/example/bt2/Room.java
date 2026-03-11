@@ -34,6 +34,7 @@ public class Room {
         this.tenNguoiThue = tenant;
     }
 
+
     public void setSoDienThoai(String phone) {
         this.soDienThoai = phone;
 

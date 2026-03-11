@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
      * @param room The room to edit, or null to add a new one.
      * @param position The position in the list, or -1 for new.
      */
+
     private void showRoomDialog(Room room, int position) {
         boolean isEdit = (room != null);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
