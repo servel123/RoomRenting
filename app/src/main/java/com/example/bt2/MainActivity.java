@@ -62,12 +62,6 @@ public class MainActivity extends AppCompatActivity {
         fabAdd.setOnClickListener(v -> showRoomDialog(null, -1));
     }
 
-    /**
-     * Shows a dialog to either add a new room or edit an existing one.
-     * @param room The room to edit, or null to add a new one.
-     * @param position The position in the list, or -1 for new.
-     */
-
     private void showRoomDialog(Room room, int position) {
         boolean isEdit = (room != null);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -82,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText etPrice = createEditText("Giá thuê", isEdit ? String.valueOf(room.getGiaThue()) : "");
         etPrice.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
 
-        final EditText etTenant = createEditText("Tên người thuê", isEdit ? room.getTenNguoiThue() : "");
+        final EditText etTenant = createEditText("Họ và tên người thuê", isEdit ? room.getTenNguoiThue() : "");
         final EditText etPhone = createEditText("Số điện thoại", isEdit ? room.getSoDienThoai() : "");
         etPhone.setInputType(InputType.TYPE_CLASS_PHONE);
 
@@ -104,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
             String priceStr = etPrice.getText().toString().trim();
 
             if (name.isEmpty() || priceStr.isEmpty()) {
-                Toast.makeText(this, "Vui lòng nhập đủ Tên và Giá!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Vui lòng nhập đủ Họ tên và Giá!", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -112,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 price = Double.parseDouble(priceStr);
             } catch (NumberFormatException e) {
-                Toast.makeText(this, "Giá thuê không hợp lệ!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Giá thuê phòng không hợp lệ!", Toast.LENGTH_SHORT).show();
                 return;
             }
 
