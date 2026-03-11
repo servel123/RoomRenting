@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Giá: 2.000.000 VNĐ"
+            android:text="Giá: 20.000.000 VNĐ"
             android:textColor="#555555" />
 
         <TextView
